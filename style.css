@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+main {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  background: black;
+}
+.menu {
+  font-size: clamp(1rem, -0.875rem + 8.333333vw, 1.5rem);
+  position: sticky;
+  top: -20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+  justify-content: center;
+  padding: 4vh 0;
+  background: linear-gradient(
+    rgba(16, 52, 198, 0) 0%,
+    hsla(200, 0%, 10%, 0.8) 1%,
+    hsla(200, 0%, 10%, 0.8) 80%,
+    rgba(16, 52, 198, 0) 100%
+  );
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  background-color: hsl(200, 60%, 50%);
+  padding: 1vh 2vw;
+  border-radius: 15px;
+  margin: 1vh 0;
+}
+
+.soc-media a {
+  color: white;
+  text-decoration: none;
+  background-color: hsl(200, 60%, 50%);
+  padding: 1vh 1vw;
+  border-radius: 15px;
+}
+
+nav a:hover {
+  background-color: hsl(200, 30%, 70%);
+  color: black;
+}
+
+.section {
+  padding-top: 20vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  scroll-snap-align: start;
+}
+
+article {
+  font-size: clamp(1rem, -0.875rem + 8.333333vw, 1.2rem);
+  line-height: 1.8;
+  background-color: hsla(100, 0%, 90%, 0.6);
+  border-radius: 2rem;
+  margin: 0 10px;
+  padding: 3vh 3vw;
+}
+
+#intro {
+  background-image: url("https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+}
+
+#work {
+  background-image: url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+}
+
+#education {
+  background-image: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2022&q=80");
+}
+
+#contact {
+  background-image: url("https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80");
+}
+
+#hobby {
+  background: green;
+  background-image: url("https://paubel.github.io/flower-gallery/close-purple3.webp");
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  grid-gap: 1vh 1vw;
+}
+
+.photos img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+/*Table*/
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 900px;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+
+table tr {
+  background-color: hsla(200, 20%, 80%, 0.6);
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  text-align: left;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: left;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/*Layout*/
+@media (max-width: 700px) {
+  .photos {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
