@@ -35,11 +35,26 @@ main {
   justify-content: center;
   padding: 1rem 0;
   background: linear-gradient(
+    #9fc13133 50%,
+    #9fc13133 60%,
+    #dbf22722 80%,
+    #dbf22711 90%,
+    #dbf22700 100%
+  );
+  /*   background: linear-gradient(
+    hsla(100, 0%, 50%, 0.9) 0%,
+    hsla(100, 0%, 50%, 0.5) 60%,
+    hsla(100, 0%, 50%, 0.4) 80%,
+    hsla(100, 0%, 50%, 0) 100%
+  ); */
+  backdrop-filter: blur(5px);
+
+  /*  background: linear-gradient(
     rgba(16, 52, 198, 0) 0%,
     #9fc131ff 1%,
     #dbf227ff 80%,
     rgba(16, 52, 198, 0) 100%
-  );
+  ); */
 }
 .menu a {
   color: var(--lightest-green);
@@ -49,14 +64,36 @@ main {
   border-radius: 15px;
   margin: 0.3vh 0;
 }
+.soc-media {
+  display: flex;
+  flex-direction: column;
+}
 
 .soc-media a {
   color: var(--lightest-green);
-  font-size: 3rem;
+  font-size: 2rem;
+
   text-decoration: none;
-  background-color: hsl(200, 80%, 20%);
+  background-color: var(--darkest-green);
   padding: 1vh 1vw;
+  margin: 1vh 1vw;
   border-radius: 15px;
+  display: inline-block;
+  text-align: center;
+}
+
+.soc-media a:nth-of-type(1):after {
+  content: "Twitter";
+}
+.soc-media a:nth-of-type(2):after {
+  content: "LinkedIn";
+}
+.soc-media a:nth-of-type(3):after {
+  content: "YouTube";
+}
+
+.soc-media a:nth-of-type(4):after {
+  content: "Email";
 }
 
 nav a:hover {
@@ -76,12 +113,20 @@ nav a:active {
   box-shadow: 1px 1px 5px 1px #42413d;
 }
 
+h1,
+h2 {
+  text-align: center;
+}
+p {
+  max-width: 70ch;
+}
+
 .section {
   padding-top: 10vh;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /*   background-attachment: fixed; */
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -124,24 +169,25 @@ article {
 #work {
   background-image: linear-gradient(
     to top,
-    #005c53,
-    #007059,
-    #1e8558,
-    #409852,
-    #66ab47,
-    #7cb741,
-    #94c239,
-    #adcd30,
-    #b8d62e,
-    #c3e02d,
+    #dbf227,
     #cfe92a,
-    #dbf227
+    #c3e02d,
+    #b8d62e,
+    #adcd30,
+    #94c239,
+    #7cb741,
+    #66ab47,
+    #409852,
+    #1e8558,
+    #007059,
+    #005c53
   );
 }
 
 #education {
   background-image: linear-gradient(
     to top,
+
     #005c53,
     #007059,
     #1e8558,
@@ -160,18 +206,18 @@ article {
 #hobby {
   background-image: linear-gradient(
     to top,
-    #005c53,
-    #007059,
-    #1e8558,
-    #409852,
-    #66ab47,
-    #7cb741,
-    #94c239,
-    #adcd30,
-    #b8d62e,
-    #c3e02d,
+    #dbf227,
     #cfe92a,
-    #dbf227
+    #c3e02d,
+    #b8d62e,
+    #adcd30,
+    #94c239,
+    #7cb741,
+    #66ab47,
+    #409852,
+    #1e8558,
+    #007059,
+    #005c53
   );
 }
 
@@ -238,7 +284,7 @@ table th {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   table {
     border: 0;
   }
@@ -267,7 +313,7 @@ table th {
   table td {
     border-bottom: 1px solid #d6d58e;
     display: block;
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-align: left;
   }
 
@@ -280,5 +326,12 @@ table th {
 @media (max-width: 700px) {
   .photos {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+@media (min-width: 600px) {
+  .soc-media {
+    display: flex;
+    flex-direction: row;
   }
 }
