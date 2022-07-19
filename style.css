@@ -135,7 +135,7 @@ p {
   justify-content: center;
   align-items: center;
   text-align: left;
-  scroll-snap-align: start;
+  /*   scroll-snap-align: start; */
 }
 
 article {
@@ -269,12 +269,12 @@ table caption {
 table tr {
   background-color: #dbf22733;
   border: 1px solid #ddd;
-  padding: 0.35em;
+  margin-bottom: 1vh;
 }
 
 table th,
 table td {
-  padding: 0.625em;
+  padding: 0.2em;
   text-align: left;
 }
 
@@ -284,7 +284,7 @@ table th {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   table {
     border: 0;
   }
@@ -305,9 +305,9 @@ table th {
   }
 
   table tr {
-    border-bottom: 3px solid #d6d58e;
+    border-bottom: 1px solid #d6d58e;
     display: block;
-    margin-bottom: 0.625em;
+    margin-bottom: 1vh;
   }
 
   table td {
